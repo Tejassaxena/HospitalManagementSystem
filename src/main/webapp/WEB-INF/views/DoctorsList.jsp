@@ -136,11 +136,13 @@ body {
 			<button type="button" id="dashboardBtn" class="btn btn-danger">Go
 				to Dashboard</button>
 			</br>
+
+		</div>
+
+		<div class="column">
 			<button type="button" id="logoutBtn" class="btn btn-danger">Log
 				Out</button>
 		</div>
-
-		<div class="column"></div>
 	</div>
 </body>
 <script

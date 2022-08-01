@@ -96,20 +96,20 @@ body {
 	<jsp:include page="navbar.jsp" />
 
 	<div class="row">
-		<a href="/loadDoctorIDPage">Load Doctor ID Page</a>
+		
 
 		<div class="column"></div>
+		<div class="column"><a href="/loadDoctorIDPage">Load Doctor ID Page</a></div>
 
 		<div class="column"></div>
-	</div>
+	</div></br>
 	<div class="row">
 		<div class="column"></div>
 
-		<div class="column"></div>
+		<div class="column"><button type="button" id="logoutBtn" class="btn btn-danger">Log
+				Out</button></div>
 
 		<div class="column">
-			<button type="button" id="logoutBtn" class="btn btn-danger">Log
-				Out</button>
 		</div>
 	</div>
 
