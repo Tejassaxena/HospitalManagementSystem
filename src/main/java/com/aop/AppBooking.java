@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-public class HmsApplication {
+public class AppBooking {
 
 	@Bean
 	public RestTemplate getRestTemplate() {
@@ -14,7 +14,7 @@ public class HmsApplication {
 	}
 
 	public static void main(String[] args) {
-		SpringApplication.run(HmsApplication.class, args);
+		SpringApplication.run(AppBooking.class, args);
 	}
 
 }
