@@ -19,13 +19,12 @@ public class AppointmentController {
 	@Autowired
 	private AppointmentService service;
 
-	@GetMapping("/gg")
+	@GetMapping("/aa")
 	public AppointMentDetails get() {
 		AppointMentDetails obj1 = new AppointMentDetails();
 		
 		AppointMentDetails appointMentDetails = new AppointMentDetails(12,12,"SS", "Mornig", "Free");
-		ConsultantDetails consultantDetails=new ConsultantDetails(12, "DD", (long) 123131231, "DD", appointMentDetails);
-		obj1.setConsDetails(consultantDetails);
+		
 
 		return obj1;
 	}

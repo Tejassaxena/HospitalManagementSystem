@@ -16,17 +16,12 @@ import javax.persistence.Table;
 @Table(name = "AppointmentDetails")
 public class AppointMentDetails {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "appID")
 	private int appID;
 	private int consID;
 	private String slots;
 	private String session;
 	private String status;
-
-	@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "appointMentDetails")
-	
-	private ConsultantDetails consDetails;
 
 	public AppointMentDetails(int appID, int consID, String slots, String session, String status) {
 		super();
@@ -81,18 +76,13 @@ public class AppointMentDetails {
 		this.status = status;
 	}
 
-	public ConsultantDetails getConsDetails() {
-		return consDetails;
-	}
-
-	public void setConsDetails(ConsultantDetails consDetails) {
-		this.consDetails = consDetails;
-	}
-
 	@Override
 	public String toString() {
 		return "AppointMentDetails [appID=" + appID + ", consID=" + consID + ", slots=" + slots + ", session=" + session
-				+ ", status=" + status + ", consDetails=" + consDetails + "]";
+				+ ", status=" + status + "]";
 	}
+
+
+
 
 }

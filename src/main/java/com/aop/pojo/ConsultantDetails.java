@@ -14,38 +14,24 @@ import javax.persistence.Table;
 @Table(name = "ConsultantDetails")
 public class ConsultantDetails {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "consID")
 	public Integer consID;
 	public String consName;
 	public Long consContact;
 	public String speciality;
-//	 @OneToOne(mappedBy="consDetails", cascade=CascadeType.ALL)
-	@OneToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "cons_app_id", nullable = false)
-	private AppointMentDetails appointMentDetails;
-
-	public ConsultantDetails(Integer consID, String consName, Long consContact, String speciality,
-			AppointMentDetails appointMentDetails) {
-		super();
-		this.consID = consID;
-		this.consName = consName;
-		this.consContact = consContact;
-		this.speciality = speciality;
-		this.appointMentDetails = appointMentDetails;
-	}
 
 	public ConsultantDetails() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public AppointMentDetails getAppointMentDetails() {
-		return appointMentDetails;
-	}
+	public ConsultantDetails(Integer consID, String consName, Long consContact, String speciality) {
+	super();
+	this.consID = consID;
+	this.consName = consName;
+	this.consContact = consContact;
+	this.speciality = speciality;
+}
 
-	public void setAppointMentDetails(AppointMentDetails appointMentDetails) {
-		this.appointMentDetails = appointMentDetails;
-	}
 
 	public Integer getConsID() {
 		return consID;
